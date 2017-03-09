@@ -17,9 +17,9 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, '../templates'));
  
-var server = app.listen(80, function() {
+var server = app.listen(3000, function() {
     //var host = server.address().address;
-    var host = 'https://node-teesitk.herokuapp.com/';
+    var host = 'https://node-teesitk.herokuapp.com';
     var port = server.address().port;
     console.log('listening at http://%s:%s', host, port);
 });
