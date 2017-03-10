@@ -17,7 +17,8 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, '../templates'));
  
-var server = app.listen(3000, function() {
+//var port = process.env.TIMES || 3000;
+var server = app.listen(process.env.TIMES || 3000, function() {
     //var host = server.address().address;
     var host = 'node-teesitk.herokuapp.com';
     var port = server.address().port;
