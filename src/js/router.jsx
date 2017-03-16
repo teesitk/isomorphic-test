@@ -7,11 +7,6 @@ import App from './components/App.jsx';
 import Home from './components/Home.jsx';
  
 export default function(req, res) {
-    /*matchPath({ routes, location:req.url }, (error, redirectLocation, renderProps) => {
-        res.render("index.handlebars", {
-            markup: ReactDOM.renderToString(<StaticRouter {...renderProps} />)
-        });
-    });*/
 
 	const context = {}
 	const markup = ReactDOM.renderToString(
@@ -24,11 +19,9 @@ export default function(req, res) {
 	)
 
 	if (context.url) {
-	  // Somewhere a `<Redirect>` was rendered
 	  console.warn('redirect')
 	  redirect(301, context.url)
 	} else {
-	  // we're good, send the response
 		res.render("index.handlebars", {
             markup: markup
         });

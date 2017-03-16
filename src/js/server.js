@@ -6,14 +6,12 @@ import router from './router.jsx';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from './components/App.jsx';
-//import {configureStore} from './configureStore';
 
  
 var app = express();
 //app.use(favicon(path.join(__dirname, '../../public/images/favicon.ico')));
 app.use(express.static('public'));
 app.use(router);
-//app.use(configureStore);
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');

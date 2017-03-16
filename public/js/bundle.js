@@ -26429,7 +26429,7 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'card' },
-					_react2.default.createElement('img', { className: 'card-img-top', src: 'http://media.thaitv3.com/store/v4/drama/2017/02/6142979654.jpg', alt: 'Card image cap' }),
+					_react2.default.createElement('img', { className: 'card-img-top', src: 'https://facebook.github.io/react/img/logo_og.png', alt: 'Card image cap' }),
 					_react2.default.createElement(
 						'div',
 						{ className: 'card-block' },
@@ -26501,7 +26501,7 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'card' },
-					_react2.default.createElement('img', { className: 'card-img-top', src: 'http://media.thaitv3.com/store/v4/drama/2017/03/0971920567.jpg', alt: 'Card image cap' }),
+					_react2.default.createElement('img', { className: 'card-img-top', src: 'http://seanamarasinghe.com/wp-content/uploads/2015/09/react-es61-1050x360.jpg', alt: 'Card image cap' }),
 					_react2.default.createElement(
 						'div',
 						{ className: 'card-block' },
