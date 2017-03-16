@@ -6,12 +6,14 @@ import router from './router.jsx';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from './components/App.jsx';
+//import {configureStore} from './configureStore';
 
  
 var app = express();
 //app.use(favicon(path.join(__dirname, '../../public/images/favicon.ico')));
 app.use(express.static('public'));
 app.use(router);
+//app.use(configureStore);
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -27,8 +29,8 @@ var server = app.listen(process.env.PORT || 3000, function() {
  
 
  
-/*app.get('*', function(req, res){
+app.get('*', function(req, res){
     res.render("index.handlebars", {
         markup: ReactDOMServer.renderToString(React.createElement(App))
     });
-});*/
+});
