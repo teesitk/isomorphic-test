@@ -6,8 +6,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+	<script>var googletag = googletag || {};googletag.cmd = googletag.cmd || [];</script>
+
+	<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+	<script>
+	function DFPSmartBanner(adslot, adSizeArray, gptID) { // adslot=Slot Name, adSize=Size Array [Desktop, iPad-Tablet, Mobile], gpID=div id
+
+		//console.log("/11682287/" + adslot + " : " + adSizeArray + " : " + gptID);
+		
+		googletag.cmd.push(function() {
+			var mapLeader = googletag.sizeMapping().
+			addSize([320, 400], adSizeArray[2]).
+			addSize([320, 700], adSizeArray[2]).
+			addSize([360, 200], adSizeArray[2]).
+			addSize([768, 200], adSizeArray[1]).
+			addSize([1000, 200], adSizeArray[0]).
+			build();
+
+			window.LeaderSlot= googletag.defineSlot("/11682287/" + adslot, [320, 50], gptID).
+			defineSizeMapping(mapLeader).
+			addService(googletag.pubads());
+
+			googletag.pubads().enableSingleRequest();
+			googletag.pubads().collapseEmptyDivs();
+			googletag.enableServices();
+
+		});
+
+		document.write("<div id='" + gptID + "' style='width: auto; height: auto;' data-glade data-ad-unit-path='/11682287/" +  adslot + "'>");
+		googletag.cmd.push(function() { googletag.display('' + gptID + ''); });
+		document.write("</div>");
+
+	}
+	</script>
+
 </head>
 <body style="background:#CCC;">
+	<div>
+		<center> 
+		  <script>
+			  
+				var adslot = "Web_TV3_V4_Home_MidRectangle_300x250";
+				var gptID = "div-gpt-ad-"+adslot;
+				var size_arr = [[300,250], [300,250], [300,250]];
+			  
+				DFPSmartBanner(adslot,   size_arr, gptID);
+			  
+			</script>
+		</center>
+	</div>
     <div id="content">{{{markup}}}</div>
     <script src="/js/bundle.min.js"></script>
 </body>
