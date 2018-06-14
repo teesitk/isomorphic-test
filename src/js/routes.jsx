@@ -4,7 +4,7 @@ import React from 'react';
 //import { Route, Router, IndexRoute } from 'react-router';
 //import createBrowserHistory from 'history/lib/createBrowserHistory';
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Link,
 } from 'react-router-dom'
