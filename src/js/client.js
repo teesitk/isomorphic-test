@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
  
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import createBrowserHistory from 'history/createBrowserHistory';
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './components/App.jsx'
  
