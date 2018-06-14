@@ -71,7 +71,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
-	  _reactRouterDom.BrowserRouter,
+	  _reactRouterDom.Router,
 	  { history: (0, _createBrowserHistory2.default)() },
 	  _react2.default.createElement(_App2.default, _routes2.default.props)
 	), document.getElementById('content'));
