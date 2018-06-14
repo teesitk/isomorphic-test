@@ -70,21 +70,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// render ลงไปใน DOM ที่ #content
-
-
-	// โหลดความสามารถของ react-router มาใช้งาน
-	//import { Router, browserHistory } from 'react-router';
-	//import { ReduxRouter } from 'redux-router';
 	_reactDom2.default.render(_react2.default.createElement(
 	  _reactRouterDom.BrowserRouter,
 	  { history: (0, _createBrowserHistory2.default)() },
 	  _react2.default.createElement(_App2.default, _routes2.default.props)
 	), document.getElementById('content'));
-
-	// โหลด route ต่างๆ ที่เราได้กำหนดไว้
-
-	//import { Provider } from 'react-redux';
 
 /***/ },
 /* 1 */
