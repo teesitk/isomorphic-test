@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "react-progress": "0.0.12",
     "react-redux": "^5.0.7",
     "react-redux-loading-bar": "^4.0.5",
     "redux": "^4.0.0"

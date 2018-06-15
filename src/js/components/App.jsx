@@ -2,7 +2,7 @@ import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
 import { Link } from 'react-router-dom';
-import LoadingBar from 'react-redux-loading-bar'
+import Progress from 'react-progress';
 
 class App extends React.Component {
  
@@ -10,8 +10,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <Progress percent={30}/>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
-        <LoadingBar updateTime={100} store={...props}/>
                   <nav className="container">
                     
 
