@@ -2,14 +2,8 @@ import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
 import { Link } from 'react-router-dom';
-import LoadingBar,{ loadingBarReducer } from 'react-redux-loading-bar'
+import LoadingBar from 'react-redux-loading-bar'
 
-import { combineReducers } from 'redux'
-
-const reducer = combineReducers({
-  // app reducers
-  loadingBar: loadingBarReducer,
-})
 class App extends React.Component {
  
     // ใส่ link ไปยังหน้า Home และ About
@@ -17,7 +11,7 @@ class App extends React.Component {
         return (
             <div>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
-        <LoadingBar/>
+        <LoadingBar updateTime={100} {...props}/>
                   <nav className="container">
                     
 
