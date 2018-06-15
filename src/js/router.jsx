@@ -15,7 +15,7 @@ export default function(req, res) {
 	    location={req.url}
 	    context={context}
 	  >
-        <LoadingBar>
+        <LoadingBar/>
 	  	<App {...routes.props}/>
 	  </StaticRouter>
 	)
