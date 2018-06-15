@@ -11,7 +11,7 @@ class App extends React.Component {
         return (
             <div>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
-        <LoadingBar updateTime={100} {...props}/>
+        <LoadingBar updateTime={100}/>
                   <nav className="container">
                     
 
