@@ -2,8 +2,14 @@ import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
 import { Link } from 'react-router-dom';
-import LoadingBar from 'react-redux-loading-bar'
- 
+import LoadingBar,{ loadingBarReducer } from 'react-redux-loading-bar'
+
+import { combineReducers } from 'redux'
+
+const reducer = combineReducers({
+  // app reducers
+  loadingBar: loadingBarReducer,
+})
 class App extends React.Component {
  
     // ใส่ link ไปยังหน้า Home และ About
