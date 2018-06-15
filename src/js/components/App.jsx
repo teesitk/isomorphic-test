@@ -2,6 +2,7 @@ import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
 import { Link } from 'react-router-dom';
+import LoadingBar from 'react-redux-loading-bar'
  
 class App extends React.Component {
  
@@ -10,6 +11,7 @@ class App extends React.Component {
         return (
             <div>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
+        <LoadingBar/>
                   <nav className="container">
                     
 
