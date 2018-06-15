@@ -24831,7 +24831,6 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'card' },
-					_react2.default.createElement('img', { className: 'card-img-top', src: 'https://facebook.github.io/react/img/logo_og.png', alt: 'Card image cap' }),
 					_react2.default.createElement(
 						'div',
 						{ className: 'card-block' },

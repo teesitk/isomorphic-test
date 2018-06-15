@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router-dom'
+import LoadingBar from 'react-redux-loading-bar'
  
 import routes from './routes.jsx';
 import App from './components/App.jsx';
@@ -14,6 +15,7 @@ export default function(req, res) {
 	    location={req.url}
 	    context={context}
 	  >
+        <LoadingBar>
 	  	<App {...routes.props}/>
 	  </StaticRouter>
 	)

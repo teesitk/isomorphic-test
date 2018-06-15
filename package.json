@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "react-redux-loading-bar": "^4.0.5"
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.13.2",

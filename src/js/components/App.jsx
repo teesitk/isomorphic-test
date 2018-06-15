@@ -9,7 +9,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
                   <nav className="container">
                     
