@@ -5,7 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "react-redux": "^5.0.7",
-    "react-redux-loading-bar": "^4.0.5"
+    "react-redux-loading-bar": "^4.0.5",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
