@@ -4,13 +4,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Progress from 'react-progress';
 
+
 class App extends React.Component {
  
+    constructor(props) {
+      super(props);
+      this.state = {
+        percent: 10
+      };
+    }
+
+    /*componentWillMount() {
+        this.setState({
+            loading: 40
+        });
+    }*/
+    setPercent (percent) {
+        this.setState({
+            percent:percent
+        });
+    }
+    componentDidMount() {
+      setPercent(10);
+    }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
         return (
             <div>
-                <Progress percent={30}/>
+                <Progress percent={this.state.percent} color='red'/>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
                   <nav className="container">
                     

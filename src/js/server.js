@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, '../templates'));
 var server = app.listen(process.env.PORT || 3000, function() {
     //var host = server.address().address;
     var host = 'node-teesitk.herokuapp.com';
+    var host = 'localhost';
     var port = server.address().port;
     console.log('listening at https://%s:%s', host, port);
 });
