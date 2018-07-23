@@ -24654,14 +24654,12 @@
 	    return _this;
 	  }
 
-	  /*componentWillMount() {
-	      this.setState({
-	          loading: 40
-	      });
-	  }*/
-
-
 	  _createClass(App, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.setPercent(0);
+	    }
+	  }, {
 	    key: 'setPercent',
 	    value: function setPercent(percent) {
 	      this.setState({
