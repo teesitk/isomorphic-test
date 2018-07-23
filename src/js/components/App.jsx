@@ -7,12 +7,12 @@ import Progress from 'react-progress';
 
 class App extends React.Component {
  
-    // constructor(props) {
-    //   super(props);
-    //   this.state = {
-    //     percent: 10
-    //   };
-    // }
+    constructor(props) {
+      super(props);
+      this.state = {
+        percent: 10
+      };
+    }
 
     /*componentWillMount() {
         this.setState({
