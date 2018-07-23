@@ -24934,13 +24934,19 @@
 	//import createBrowserHistory from 'history/lib/createBrowserHistory';
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
-	  { exact: true, component: _App2.default },
+	  { exact: true, component: _App2.default, onChange: handler },
 	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: _Home2.default }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
 	);
 
 	// โหลด component ต่างๆ
+
+	function handler(previousRoute, nextRoute) {
+	  this.setState({
+	    percent: 100
+	  });
+	}
 
 /***/ },
 /* 72 */
