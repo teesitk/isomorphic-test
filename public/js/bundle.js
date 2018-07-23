@@ -24671,6 +24671,18 @@
 	    value: function componentDidMount() {
 	      this.setPercent(100);
 	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps) {
+	      if (this.props.location !== prevProps.location) {
+	        this.onRouteChanged();
+	      }
+	    }
+	  }, {
+	    key: 'onRouteChanged',
+	    value: function onRouteChanged() {
+	      console.log("ROUTE CHANGED");
+	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 
 	  }, {
