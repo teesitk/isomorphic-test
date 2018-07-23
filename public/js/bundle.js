@@ -24654,13 +24654,17 @@
 	    return _this;
 	  }
 
+	  // componentWillMount() {
+	  //     this.setPercent(0)
+	  // }
+
+
 	  _createClass(App, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setPercent(0);
-	      this.unlisten = this.props.history.listen(function (location, action) {
-	        console.log("on route change");
-	      });
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if (this.props.location !== nextProps.location) {
+	        console.log('ROUTE CHANGED');
+	      }
 	    }
 	  }, {
 	    key: 'setPercent',

@@ -14,11 +14,13 @@ class App extends React.Component {
       };
     }
 
-    componentWillMount() {
-        this.setPercent(0)
-        this.unlisten = this.props.history.listen((location, action) => {
-          console.log("on route change");
-        });
+    // componentWillMount() {
+    //     this.setPercent(0)
+    // }
+    componentWillReceiveProps(nextProps) {
+      if (this.props.location !== nextProps.location) {
+        console.log('ROUTE CHANGED');
+      }
     }
     setPercent (percent) {
         this.setState({
