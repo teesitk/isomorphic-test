@@ -16,14 +16,9 @@ import About from './components/About.jsx';
  
 // ระบุว่า path นี้จะถูก handle ด้วย component ไหน
 export default (
-    <Route exact component={App} onChange={handler}>
+    <Route exact component={App}>
         <Route exact path="/" component={Home}/>
         <Route path="/home" component={Home}/>
         <Route path="/about" component={About}/>
     </Route>
 );
-function handler(previousRoute, nextRoute) {
-	this.setState({
-        percent:0
-    });
-}

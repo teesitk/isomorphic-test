@@ -17,12 +17,6 @@ class App extends React.Component {
     // componentWillMount() {
     //     this.setPercent(0)
     // }
-    componentWillReceiveProps(nextProps) {
-        console.log('ROUTE CHANGED 1');
-      if (this.props.location !== nextProps.location) {
-        console.log('ROUTE CHANGED');
-      }
-    }
     setPercent (percent) {
         this.setState({
             percent:percent

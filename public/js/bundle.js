@@ -24660,14 +24660,6 @@
 
 
 	  _createClass(App, [{
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      console.log('ROUTE CHANGED 1');
-	      if (this.props.location !== nextProps.location) {
-	        console.log('ROUTE CHANGED');
-	      }
-	    }
-	  }, {
 	    key: 'setPercent',
 	    value: function setPercent(percent) {
 	      this.setState({
@@ -24940,19 +24932,13 @@
 	//import createBrowserHistory from 'history/lib/createBrowserHistory';
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
-	  { exact: true, component: _App2.default, onChange: handler },
+	  { exact: true, component: _App2.default },
 	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: _Home2.default }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
 	);
 
 	// โหลด component ต่างๆ
-
-	function handler(previousRoute, nextRoute) {
-	  this.setState({
-	    percent: 0
-	  });
-	}
 
 /***/ },
 /* 72 */
@@ -25000,6 +24986,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				console.log("ROUTED");
 			}
 		}, {
 			key: 'render',
