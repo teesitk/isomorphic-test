@@ -24662,6 +24662,7 @@
 	  _createClass(App, [{
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(nextProps) {
+	      console.log('ROUTE CHANGED 1');
 	      if (this.props.location !== nextProps.location) {
 	        console.log('ROUTE CHANGED');
 	      }
