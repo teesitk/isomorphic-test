@@ -24941,9 +24941,15 @@
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
 	  { exact: true, component: _App2.default },
-	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: _Home2.default }),
-	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: function component(props) {
+	      return _react2.default.createElement(_Home2.default, props);
+	    } }),
+	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: function component(props) {
+	      return _react2.default.createElement(_Home2.default, props);
+	    } }),
+	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: function component(props) {
+	      return _react2.default.createElement(_About2.default, props);
+	    } })
 	);
 
 	// โหลด component ต่างๆ
