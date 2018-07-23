@@ -24654,12 +24654,15 @@
 	    return _this;
 	  }
 
-	  // componentWillMount() {
-	  //     this.setPercent(0)
-	  // }
-
-
 	  _createClass(App, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.setPercent(0);
+	      this.unlisten = this.props.history.listen(function (location, action) {
+	        console.log("on route change");
+	      });
+	    }
+	  }, {
 	    key: 'setPercent',
 	    value: function setPercent(percent) {
 	      this.setState({
@@ -24670,18 +24673,6 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.setPercent(100);
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate(prevProps) {
-	      if (this.props.location !== prevProps.location) {
-	        this.onRouteChanged();
-	      }
-	    }
-	  }, {
-	    key: 'onRouteChanged',
-	    value: function onRouteChanged() {
-	      console.log("ROUTE CHANGED");
 	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 

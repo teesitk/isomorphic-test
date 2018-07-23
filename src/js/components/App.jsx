@@ -14,9 +14,12 @@ class App extends React.Component {
       };
     }
 
-    // componentWillMount() {
-    //     this.setPercent(0)
-    // }
+    componentWillMount() {
+        this.setPercent(0)
+        this.unlisten = this.props.history.listen((location, action) => {
+          console.log("on route change");
+        });
+    }
     setPercent (percent) {
         this.setState({
             percent:percent
@@ -24,15 +27,6 @@ class App extends React.Component {
     }
     componentDidMount() {
       this.setPercent(100)
-    }
-    componentDidUpdate(prevProps) {
-      if (this.props.location !== prevProps.location) {
-        this.onRouteChanged();
-      }
-    }
-
-    onRouteChanged() {
-      console.log("ROUTE CHANGED");
     }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
