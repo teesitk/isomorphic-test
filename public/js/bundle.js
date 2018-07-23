@@ -24668,16 +24668,17 @@
 	        percent: percent
 	      });
 	    }
-	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setPercent(100);
-	    }
+	    // componentWillMount() {
+	    //   this.setPercent(100)
+	    // }
 	    // ใส่ link ไปยังหน้า Home และ About
 
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      if (this.state.percent != 100) {
+	        this.setPercent(100);
+	      }
 	      return _react2.default.createElement(
 	        'div',
 	        null,
