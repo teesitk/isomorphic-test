@@ -24669,8 +24669,8 @@
 	      });
 	    }
 	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
 	      this.setPercent(100);
 	    }
 	    // ใส่ link ไปยังหน้า Home และ About

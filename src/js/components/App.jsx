@@ -24,7 +24,7 @@ class App extends React.Component {
             percent:percent
         });
     }
-    componentWillMount() {
+    componentDidMount() {
       this.setPercent(100)
     }
     // ใส่ link ไปยังหน้า Home และ About
