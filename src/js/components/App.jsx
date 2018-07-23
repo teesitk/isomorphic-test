@@ -10,7 +10,7 @@ class App extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        percent: 10
+        percent: 1
       };
     }
 
@@ -24,14 +24,11 @@ class App extends React.Component {
             percent:percent
         });
     }
-    // componentWillMount() {
-    //   this.setPercent(100)
-    // }
+    componentWillMount() {
+      this.setPercent(100)
+    }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
-      if(this.state.percent!=100){
-        this.setPercent(100);
-      }
         return (
             <div>
                 <Progress percent={this.state.percent} color='red'/>

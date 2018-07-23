@@ -24649,7 +24649,7 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 	    _this.state = {
-	      percent: 10
+	      percent: 1
 	    };
 	    return _this;
 	  }
@@ -24668,17 +24668,16 @@
 	        percent: percent
 	      });
 	    }
-	    // componentWillMount() {
-	    //   this.setPercent(100)
-	    // }
+	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.setPercent(100);
+	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      if (this.state.percent != 100) {
-	        this.setPercent(100);
-	      }
 	      return _react2.default.createElement(
 	        'div',
 	        null,
