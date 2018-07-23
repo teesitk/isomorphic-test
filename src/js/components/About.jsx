@@ -10,6 +10,8 @@ class About extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
+		this.props.progressDone()
+		console.log("ROUTED")
 	}
 	
     render() {

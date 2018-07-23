@@ -24667,6 +24667,13 @@
 	      });
 	    }
 	  }, {
+	    key: 'progressDone',
+	    value: function progressDone(e) {
+	      this.setState({
+	        percent: 100
+	      });
+	    }
+	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.setPercent(100);
@@ -24986,6 +24993,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				this.props.progressDone();
 				console.log("ROUTED");
 			}
 		}, {
@@ -25058,6 +25066,8 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				this.props.progressDone();
+				console.log("ROUTED");
 			}
 		}, {
 			key: 'render',

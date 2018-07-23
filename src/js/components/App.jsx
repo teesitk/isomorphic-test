@@ -22,6 +22,11 @@ class App extends React.Component {
             percent:percent
         });
     }
+    progressDone (e) {
+        this.setState({
+            percent:100
+        });
+    }
     componentDidMount() {
       this.setPercent(100)
     }
