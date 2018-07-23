@@ -24,14 +24,11 @@ class App extends React.Component {
             percent:percent
         });
     }
-    componentDidMount() {
-      setPercent(10);
-    }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
         return (
             <div>
-                <Progress percent={this.state.percent} color='red'/>
+                <Progress percent={100} color='red'/>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
                   <nav className="container">
                     
