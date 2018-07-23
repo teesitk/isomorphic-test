@@ -24,6 +24,6 @@ export default (
 );
 function handler(previousRoute, nextRoute) {
 	this.setState({
-        percent:100
+        percent:0
     });
 }

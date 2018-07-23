@@ -14,9 +14,9 @@ class App extends React.Component {
       };
     }
 
-    componentWillMount() {
-        this.setPercent(0)
-    }
+    // componentWillMount() {
+    //     this.setPercent(0)
+    // }
     setPercent (percent) {
         this.setState({
             percent:percent

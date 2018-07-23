@@ -24654,12 +24654,12 @@
 	    return _this;
 	  }
 
+	  // componentWillMount() {
+	  //     this.setPercent(0)
+	  // }
+
+
 	  _createClass(App, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setPercent(0);
-	    }
-	  }, {
 	    key: 'setPercent',
 	    value: function setPercent(percent) {
 	      this.setState({
@@ -24942,7 +24942,7 @@
 
 	function handler(previousRoute, nextRoute) {
 	  this.setState({
-	    percent: 100
+	    percent: 0
 	  });
 	}
 
