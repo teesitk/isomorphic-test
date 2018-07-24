@@ -24672,7 +24672,6 @@
 	      this.setState({
 	        percent: 100
 	      });
-	      console.log('enought');
 	    }
 	  }, {
 	    key: 'componentDidMount',

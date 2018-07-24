@@ -26,7 +26,6 @@ class App extends React.Component {
         this.setState({
             percent:100
         });
-        console.log('enought');
     }
     componentDidMount() {
       this.setPercent(100)
