@@ -31,15 +31,6 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
-    componentWillReceiveProps(nextProps) {
-      console.log('ROUTED')
-      // will be true
-      const locationChanged = nextProps.location !== this.props.location
-      console.log(locationChanged)
-
-      // INCORRECT, will *always* be false because history is mutable.
-      //const locationChanged = nextProps.history.location !== this.props.history.location
-    }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
         return (

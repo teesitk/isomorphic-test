@@ -24679,17 +24679,6 @@
 	    value: function componentDidMount() {
 	      this.setPercent(100);
 	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      console.log('ROUTED');
-	      // will be true
-	      var locationChanged = nextProps.location !== this.props.location;
-	      console.log(locationChanged);
-
-	      // INCORRECT, will *always* be false because history is mutable.
-	      //const locationChanged = nextProps.history.location !== this.props.history.location
-	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 
 	  }, {
@@ -25011,6 +25000,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				console.log(this.props);
 			}
 		}, {
 			key: 'render',
