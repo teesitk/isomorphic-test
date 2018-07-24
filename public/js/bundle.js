@@ -24686,7 +24686,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_reactProgress2.default, { percent: 100, color: 'red' }),
+	        _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
 	        _react2.default.createElement(
 	          'header',
 	          { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
@@ -24945,6 +24945,8 @@
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: function component(props) {
 	      return _react2.default.createElement(_Home2.default, props);
+	    }, render: function render() {
+	      handler;
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: function component(props) {
 	      return _react2.default.createElement(_About2.default, props);
@@ -24952,6 +24954,10 @@
 	);
 
 	// โหลด component ต่างๆ
+
+	function handler() {
+	  console.log('wew');
+	}
 
 /***/ },
 /* 72 */

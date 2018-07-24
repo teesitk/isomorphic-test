@@ -34,7 +34,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Progress percent={100} color='red'/>
+                <Progress percent={this.state.percent} color='red'/>
                 <header className="navbar navbar-light navbar-toggleable-md bd-navbar">
                   <nav className="container">
                     
