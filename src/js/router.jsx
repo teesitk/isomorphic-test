@@ -22,7 +22,6 @@ export default function(req, res) {
 	  console.warn('redirect')
 	  redirect(301, context.url)
 	} else {
-        console.log('wew')
 		res.render("index.handlebars", {
             markup: markup
         });

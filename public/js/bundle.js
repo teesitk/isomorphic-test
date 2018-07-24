@@ -24686,7 +24686,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
+	        _react2.default.createElement(_reactProgress2.default, { percent: 100, color: 'red' }),
 	        _react2.default.createElement(
 	          'header',
 	          { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
