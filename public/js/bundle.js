@@ -24651,9 +24651,6 @@
 	    _this.state = {
 	      percent: 1
 	    };
-	    _reactRouterDom.browserHistory.listen(function (location) {
-	      console.log('ROUTED');
-	    });
 	    return _this;
 	  }
 
@@ -24681,6 +24678,17 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.setPercent(100);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      console.log('ROUTED');
+	      // will be true
+	      var locationChanged = nextProps.location !== this.props.location;
+	      console.log(locationChanged);
+
+	      // INCORRECT, will *always* be false because history is mutable.
+	      //const locationChanged = nextProps.history.location !== this.props.history.location
 	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 

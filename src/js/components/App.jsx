@@ -1,7 +1,7 @@
 import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
-import { Link, browserHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Progress from 'react-progress';
 
 
@@ -12,9 +12,6 @@ class App extends React.Component {
       this.state = {
         percent: 1
       };
-      browserHistory.listen( location =>  {
-       console.log('ROUTED')
-      });
     }
 
     // componentWillMount() {
@@ -33,6 +30,15 @@ class App extends React.Component {
     }
     componentDidMount() {
       this.setPercent(100)
+    }
+    componentWillReceiveProps(nextProps) {
+      console.log('ROUTED')
+      // will be true
+      const locationChanged = nextProps.location !== this.props.location
+      console.log(locationChanged)
+
+      // INCORRECT, will *always* be false because history is mutable.
+      //const locationChanged = nextProps.history.location !== this.props.history.location
     }
     // ใส่ link ไปยังหน้า Home และ About
     render() {
