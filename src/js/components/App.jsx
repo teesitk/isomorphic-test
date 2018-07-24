@@ -1,7 +1,7 @@
 import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
-import { Link } from 'react-router-dom';
+import { Link, browserHistory } from 'react-router-dom';
 import Progress from 'react-progress';
 
 
@@ -12,6 +12,9 @@ class App extends React.Component {
       this.state = {
         percent: 1
       };
+      browserHistory.listen( location =>  {
+       console.log('ROUTED')
+      });
     }
 
     // componentWillMount() {

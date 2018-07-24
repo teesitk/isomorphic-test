@@ -7,7 +7,6 @@ import {
   Router,
   Route,
   Link,
-  browserHistory
 } from 'react-router-dom'
  
 // โหลด component ต่างๆ
@@ -15,10 +14,6 @@ import App from './components/App.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
  
-
-browserHistory.listen( location =>  {
- console.log('ROUTED')
-});
 // ระบุว่า path นี้จะถูก handle ด้วย component ไหน
 export default (
     <Route exact component={App}>
