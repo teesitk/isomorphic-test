@@ -20,6 +20,7 @@ export default function(req, res) {
 
 	if (context.url) {
 	  console.warn('redirect')
+	  console.log('redirect')
 	  redirect(301, context.url)
 	} else {
 		res.render("index.handlebars", {

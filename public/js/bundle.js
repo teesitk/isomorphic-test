@@ -24985,15 +24985,10 @@
 	var Home = function (_React$Component) {
 		_inherits(Home, _React$Component);
 
-		function Home(props) {
+		function Home() {
 			_classCallCheck(this, Home);
 
-			var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
-
-			_this.state = {
-				percent: 1
-			};
-			return _this;
+			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
 		}
 
 		_createClass(Home, [{
@@ -25005,8 +25000,6 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
-				this.props.setPercent(100);
-				//console.log(this.props.setPercent(100));
 			}
 		}, {
 			key: 'render',
