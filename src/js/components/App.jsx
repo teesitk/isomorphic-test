@@ -30,6 +30,10 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
+    componentWillUnmount() {
+      this.setPercent(100)
+    }
+
     // ใส่ link ไปยังหน้า Home และ About
     render() {
         return (

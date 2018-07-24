@@ -24678,6 +24678,12 @@
 	    value: function componentDidMount() {
 	      this.setPercent(100);
 	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.setPercent(100);
+	    }
+
 	    // ใส่ link ไปยังหน้า Home และ About
 
 	  }, {
@@ -24945,8 +24951,6 @@
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: function component(props) {
 	      return _react2.default.createElement(_Home2.default, props);
-	    }, render: function render() {
-	      handler;
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: function component(props) {
 	      return _react2.default.createElement(_About2.default, props);
@@ -24954,10 +24958,6 @@
 	);
 
 	// โหลด component ต่างๆ
-
-	function handler() {
-	  console.log('wew');
-	}
 
 /***/ },
 /* 72 */
