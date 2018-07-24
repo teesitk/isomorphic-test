@@ -1,10 +1,13 @@
 import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
-import { Link } from 'react-router-dom';
+import { Link, browserHistory } from 'react-router-dom';
 import Progress from 'react-progress';
 
 
+browserHistory.listen( location =>  {
+ console.log('ROUTED')
+});
 class App extends React.Component {
  
     constructor(props) {
@@ -51,7 +54,7 @@ class App extends React.Component {
 
                     <div className="collapse navbar-collapse" id="bd-main-nav">
                         <ul className="nav navbar-nav">
-                            <li className="nav-item"><Link to='/' className="nav-item nav-link " onClick={this.progressDone}><i className="fa fa-drivers-license-o" aria-hidden="true"></i>Home</Link></li>
+                            <li className="nav-item"><Link to='/' className="nav-item nav-link "><i className="fa fa-drivers-license-o" aria-hidden="true"></i>Home</Link></li>
                             <li className="nav-item"><Link to='/about' className="nav-item nav-link ">About</Link></li>
                         </ul>
                     </div>

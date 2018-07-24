@@ -24640,6 +24640,10 @@
 	// โหลดความสามารถของ react-router มาใช้งาน
 
 
+	_reactRouterDom.browserHistory.listen(function (location) {
+	  console.log('ROUTED');
+	});
+
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -24719,7 +24723,7 @@
 	                  { className: 'nav-item' },
 	                  _react2.default.createElement(
 	                    _reactRouterDom.Link,
-	                    { to: '/', className: 'nav-item nav-link ', onClick: this.progressDone },
+	                    { to: '/', className: 'nav-item nav-link ' },
 	                    _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
 	                    'Home'
 	                  )
