@@ -24681,7 +24681,8 @@
 	  }, {
 	    key: 'componentWillUnmount',
 	    value: function componentWillUnmount() {
-	      this.setPercent(100);
+	      this.setPercent(0);
+	      console.log('unmount');
 	    }
 
 	    // ใส่ link ไปยังหน้า Home และ About

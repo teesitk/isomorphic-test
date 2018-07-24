@@ -31,7 +31,8 @@ class App extends React.Component {
       this.setPercent(100)
     }
     componentWillUnmount() {
-      this.setPercent(100)
+      this.setPercent(0)
+      console.log('unmount')
     }
 
     // ใส่ link ไปยังหน้า Home และ About
