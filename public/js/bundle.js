@@ -25000,7 +25000,8 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
-				console.log(this.props);
+				this.props.setPercent(100);
+				//console.log(this.props.setPercent(100));
 			}
 		}, {
 			key: 'render',
