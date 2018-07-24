@@ -24672,6 +24672,7 @@
 	      this.setState({
 	        percent: 100
 	      });
+	      console.log('enought');
 	    }
 	  }, {
 	    key: 'componentDidMount',
@@ -24718,7 +24719,7 @@
 	                  { className: 'nav-item' },
 	                  _react2.default.createElement(
 	                    _reactRouterDom.Link,
-	                    { to: '/', className: 'nav-item nav-link ' },
+	                    { to: '/', className: 'nav-item nav-link ', onClick: this.progressDone },
 	                    _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
 	                    'Home'
 	                  )
@@ -24999,7 +25000,6 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
-				this.props.progressDone();
 			}
 		}, {
 			key: 'render',

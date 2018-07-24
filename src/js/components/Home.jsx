@@ -10,7 +10,6 @@ class Home extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
-		this.props.progressDone();
 	}
 	
     render() {
