@@ -8,15 +8,6 @@ import Home from './components/Home.jsx';
  
 export default function(req, res) {
 
-	if (context.url) {
-	  console.warn('redirect')
-	  redirect(301, context.url)
-	} else {
-		res.render("index.handlebars", {
-            markup: markup
-        });
-        console.log('wew')
-	}
 	const context = {}
 	const markup = ReactDOM.renderToString(
 	  <StaticRouter
@@ -27,4 +18,13 @@ export default function(req, res) {
 	  </StaticRouter>
 	)
 
+	if (context.url) {
+	  console.warn('redirect')
+	  redirect(301, context.url)
+	} else {
+        console.log('wew')
+		res.render("index.handlebars", {
+            markup: markup
+        });
+	}
 }
