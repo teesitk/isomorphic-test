@@ -1,13 +1,10 @@
 import React from 'react';
  
 // โหลดความสามารถของ react-router มาใช้งาน
-import { Link, browserHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Progress from 'react-progress';
 
 
-browserHistory.listen( location =>  {
- console.log('ROUTED')
-});
 class App extends React.Component {
  
     constructor(props) {

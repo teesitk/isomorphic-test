@@ -24640,10 +24640,6 @@
 	// โหลดความสามารถของ react-router มาใช้งาน
 
 
-	_reactRouterDom.browserHistory.listen(function (location) {
-	  console.log('ROUTED');
-	});
-
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -24936,12 +24932,16 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// ระบุว่า path นี้จะถูก handle ด้วย component ไหน
-
-
 	// โหลดความสามารถของ react-router มาใช้งาน
 	//import { Route, Router, IndexRoute } from 'react-router';
 	//import createBrowserHistory from 'history/lib/createBrowserHistory';
+	_reactRouterDom.browserHistory.listen(function (location) {
+	  console.log('ROUTED');
+	});
+	// ระบุว่า path นี้จะถูก handle ด้วย component ไหน
+
+
+	// โหลด component ต่างๆ
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
 	  { exact: true, component: _App2.default },
@@ -24955,8 +24955,6 @@
 	      return _react2.default.createElement(_About2.default, props);
 	    } })
 	);
-
-	// โหลด component ต่างๆ
 
 /***/ },
 /* 72 */
