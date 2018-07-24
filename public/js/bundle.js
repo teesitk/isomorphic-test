@@ -24677,7 +24677,6 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.setPercent(100);
-	      console.log(this.props);
 	    }
 	    // ใส่ link ไปยังหน้า Home และ About
 
@@ -25000,6 +24999,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				this.props.progressDone();
 			}
 		}, {
 			key: 'render',
