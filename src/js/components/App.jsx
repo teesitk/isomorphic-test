@@ -30,7 +30,7 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
-    componentWillUnmount() {
+    componentDidUpdate() {
       this.setPercent(0)
       console.log('unmount')
     }

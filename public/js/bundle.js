@@ -24679,8 +24679,8 @@
 	      this.setPercent(100);
 	    }
 	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
 	      this.setPercent(0);
 	      console.log('unmount');
 	    }
