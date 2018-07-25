@@ -25082,6 +25082,14 @@
 				});
 			}
 		}, {
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				console.log('ok');
+				if (nextProps.location !== this.props.location) {
+					// navigated!
+				}
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
