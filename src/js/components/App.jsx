@@ -31,14 +31,11 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
-    componentWillMount() {
-      console.log(this.props.history)
-      //this.unlisten = this.props.history.listen((location, action) => {
-      console.log("on route change");
-      //});
-    }
-    componentWillUnmount() {
-        this.unlisten();
+    componentWillReceiveProps(nextProps) {
+      console.log('ok')
+      if (nextProps.location !== this.props.location) {
+        // navigated!
+      }
     }
 
     // ใส่ link ไปยังหน้า Home และ About
