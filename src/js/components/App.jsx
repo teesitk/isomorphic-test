@@ -6,12 +6,13 @@ import Progress from 'react-progress';
 
 
 class App extends React.Component {
- 
+
     constructor(props) {
       super(props);
       this.state = {
         percent: 1
       };
+      this.unlisten = {};
     }
 
     // componentWillMount() {

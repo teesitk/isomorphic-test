@@ -24651,6 +24651,7 @@
 	        _this.state = {
 	            percent: 1
 	        };
+	        _this.unlisten = {};
 	        return _this;
 	    }
 
