@@ -32,12 +32,12 @@ class App extends React.Component {
       this.setPercent(100)
     }
 
+    componentWillUpdate(e) {
+      console.log(e)
+    }
+
     // ใส่ link ไปยังหน้า Home และ About
     render() {
-      const { children } = this.props;
-      const childrenWithProps = React.Children.map(children, child =>
-        React.cloneElement(child, { progressDone: this.progressDone }));
-      console.log(childrenWithProps)
         return (
             <div>
                 <Progress percent={this.state.percent} color='red'/>
@@ -70,7 +70,7 @@ class App extends React.Component {
                         <p className="card-text">sample content.</p><i className="fa fa-drivers-license-o" aria-hidden="true"></i>
                       </div>
                     </div>
-                    {childrenWithProps}
+                    {this.props.children}
                 </div>
 
             </div>
