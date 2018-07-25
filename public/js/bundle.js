@@ -24665,9 +24665,6 @@
 	            this.setState({
 	                percent: percent
 	            });
-	            this.setState({
-	                percent: 0
-	            });
 	        }
 	    }, {
 	        key: 'progressDone',
@@ -25004,6 +25001,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				console.log(this.state);
 			}
 		}, {
 			key: 'render',

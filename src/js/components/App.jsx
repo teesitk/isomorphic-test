@@ -21,9 +21,6 @@ class App extends React.Component {
         this.setState({
             percent:percent
         });
-        this.setState({
-            percent:0
-        });
     }
     progressDone (e) {
         e.preventDefault()
