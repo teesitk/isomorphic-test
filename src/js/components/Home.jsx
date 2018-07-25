@@ -11,6 +11,12 @@ class Home extends React.Component {
 			elem.style.opacity = 1;
 		});
 	}
+    componentWillReceiveProps(nextProps) {
+      console.log('ok')
+      if (nextProps.location !== this.props.location) {
+        // navigated!
+      }
+    }
 	
     render() {
         return (
