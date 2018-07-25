@@ -24665,6 +24665,9 @@
 	            this.setState({
 	                percent: percent
 	            });
+	            this.setState({
+	                percent: 0
+	            });
 	        }
 	    }, {
 	        key: 'progressDone',
@@ -24678,13 +24681,6 @@
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
 	            this.setPercent(100);
-	        }
-	    }, {
-	        key: 'componentWillReceiveProps',
-	        value: function componentWillReceiveProps(nextProps) {
-	            console.log('rcp');
-	            // will be true
-	            var locationChanged = nextProps.location !== this.props.location;
 	        }
 
 	        // ใส่ link ไปยังหน้า Home และ About
