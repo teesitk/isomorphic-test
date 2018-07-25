@@ -3,6 +3,9 @@ import ReactDom from 'react-dom';
  
 class Home extends React.Component {
 
+    constructor(props) {
+      super(props);
+    }
 	componentDidMount() {
 		var elem = ReactDom.findDOMNode(this);
 		elem.style.opacity = 0;
@@ -10,7 +13,7 @@ class Home extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
-		console.log(this.props)
+		this.props.progressDone();
 	}
 	
     render() {
