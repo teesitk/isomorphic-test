@@ -24689,6 +24689,7 @@
 
 	            var children = this.props.children;
 
+	            console.log(children);
 	            var childrenWithProps = _react2.default.Children.map(children, function (child) {
 	                return _react2.default.cloneElement(child, { progressDone: _this2.progressDone });
 	            });

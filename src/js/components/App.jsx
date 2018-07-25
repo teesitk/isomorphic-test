@@ -35,6 +35,7 @@ class App extends React.Component {
     // ใส่ link ไปยังหน้า Home และ About
     render() {
       const { children } = this.props;
+      console.log(children)
       const childrenWithProps = React.Children.map(children, child =>
         React.cloneElement(child, { progressDone: this.progressDone }));
         return (
