@@ -24682,9 +24682,10 @@
 	    }, {
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
-	            this.unlisten = this.props.history.listen(function (location, action) {
-	                console.log("on route change");
-	            });
+	            console.log(this.props.history);
+	            //this.unlisten = this.props.history.listen((location, action) => {
+	            console.log("on route change");
+	            //});
 	        }
 	    }, {
 	        key: 'componentWillUnmount',

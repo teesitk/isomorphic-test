@@ -32,9 +32,10 @@ class App extends React.Component {
       this.setPercent(100)
     }
     componentWillMount() {
-      this.unlisten = this.props.history.listen((location, action) => {
+      console.log(this.props.history)
+      //this.unlisten = this.props.history.listen((location, action) => {
       console.log("on route change");
-    });
+      //});
     }
     componentWillUnmount() {
         this.unlisten();
