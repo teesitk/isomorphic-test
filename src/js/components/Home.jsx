@@ -3,6 +3,12 @@ import ReactDom from 'react-dom';
  
 class Home extends React.Component {
 
+    constructor(props) {
+      super(props);
+      this.state = {
+        percent: 1
+      };
+    }
 	componentDidMount() {
 		var elem = ReactDom.findDOMNode(this);
 		elem.style.opacity = 0;
@@ -10,13 +16,10 @@ class Home extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
+        this.setState({
+            percent:100
+        });
 	}
-    componentWillReceiveProps(nextProps) {
-      console.log('ok')
-      if (nextProps.location !== this.props.location) {
-        // navigated!
-      }
-    }
 	
     render() {
         return (
