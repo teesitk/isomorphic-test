@@ -24680,9 +24680,12 @@
 	            this.setPercent(100);
 	        }
 	    }, {
-	        key: 'componentWillUpdate',
-	        value: function componentWillUpdate(e) {
-	            console.log(e);
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {
+	            console.log(nextProps);
+	            if (nextProps.location !== this.props.location) {
+	                // navigated!
+	            }
 	        }
 
 	        // ใส่ link ไปยังหน้า Home และ About
