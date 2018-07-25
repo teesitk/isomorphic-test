@@ -24945,7 +24945,7 @@
 	// โหลด component ต่างๆ
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
-	  { exact: true, component: _App2.default },
+	  { exact: true, component: _App2.default, onChange: handler },
 	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: function component(props) {
 	      return _react2.default.createElement(_Home2.default, props);
 	    } }),

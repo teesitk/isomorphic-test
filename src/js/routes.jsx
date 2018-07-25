@@ -19,7 +19,7 @@ function handler(){
 }
 // ระบุว่า path นี้จะถูก handle ด้วย component ไหน
 export default (
-    <Route exact component={App} >
+    <Route exact component={App} onChange={handler}>
         <Route exact path="/" component={props => <Home {...props} />}/>
         <Route path="/home" component={props => <Home {...props} />}/>
         <Route path="/about" component={props => <About {...props} />}/>
