@@ -25080,14 +25080,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
-			}
-		}, {
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(nextProps) {
 				console.log('ok');
-				if (nextProps.location !== this.props.location) {
-					// navigated!
-				}
 			}
 		}, {
 			key: 'render',

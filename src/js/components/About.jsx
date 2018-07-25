@@ -10,13 +10,8 @@ class About extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
-	}
-    componentWillReceiveProps(nextProps) {
       console.log('ok')
-      if (nextProps.location !== this.props.location) {
-        // navigated!
-      }
-    }
+	}
 	
     render() {
         return (
