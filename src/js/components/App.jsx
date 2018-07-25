@@ -12,7 +12,6 @@ class App extends React.Component {
       this.state = {
         percent: 1
       };
-      this.progressDone = this.progressDone.bind(this)
     }
 
     // componentWillMount() {
@@ -35,6 +34,9 @@ class App extends React.Component {
 
     // ใส่ link ไปยังหน้า Home และ About
     render() {
+      const { children } = this.props;
+      const childrenWithProps = React.Children.map(children, child =>
+        React.cloneElement(child, { progressDone: this.progressDone }));
         return (
             <div>
                 <Progress percent={this.state.percent} color='red'/>

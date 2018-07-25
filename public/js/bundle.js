@@ -24651,7 +24651,6 @@
 	        _this.state = {
 	            percent: 1
 	        };
-	        _this.progressDone = _this.progressDone.bind(_this);
 	        return _this;
 	    }
 
@@ -24686,6 +24685,13 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
+	            var children = this.props.children;
+
+	            var childrenWithProps = _react2.default.Children.map(children, function (child) {
+	                return _react2.default.cloneElement(child, { progressDone: _this2.progressDone });
+	            });
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -25075,6 +25081,7 @@
 					elem.style.opacity = 1;
 				});
 				console.log(this.props);
+				this.props.progressDone();
 			}
 		}, {
 			key: 'render',

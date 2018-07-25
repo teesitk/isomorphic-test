@@ -11,6 +11,7 @@ class About extends React.Component {
 			elem.style.opacity = 1;
 		});
 		console.log(this.props)
+		this.props.progressDone()
 	}
 	
     render() {
