@@ -24694,6 +24694,7 @@
 	            var childrenWithProps = _react2.default.Children.map(children, function (child) {
 	                return _react2.default.cloneElement(child, { progressDone: _this2.progressDone });
 	            });
+	            console.log(childrenWithProps);
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -25082,6 +25083,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
+				console.log(this.props.progressDone);
 			}
 		}, {
 			key: 'render',

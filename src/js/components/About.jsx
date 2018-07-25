@@ -13,6 +13,7 @@ class About extends React.Component {
 			elem.style.transition = "opacity 500ms";
 			elem.style.opacity = 1;
 		});
+		console.log(this.props.progressDone)
 	}
 	
     render() {

@@ -39,6 +39,7 @@ class App extends React.Component {
 
         const childrenWithProps = React.Children.map(children, child =>
           React.cloneElement(child, { progressDone: this.progressDone }));
+        console.log(childrenWithProps);
         return (
             <div>
                 <Progress percent={this.state.percent} color='red'/>
