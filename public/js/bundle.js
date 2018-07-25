@@ -24913,6 +24913,16 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	// โหลดความสามารถของ react-router มาใช้งาน
+	//import { Route, Router, IndexRoute } from 'react-router';
+	//import createBrowserHistory from 'history/lib/createBrowserHistory';
+
+
+	// โหลด component ต่างๆ
+
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -24933,27 +24943,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// โหลดความสามารถของ react-router มาใช้งาน
-	//import { Route, Router, IndexRoute } from 'react-router';
-	//import createBrowserHistory from 'history/lib/createBrowserHistory';
 	function handler() {
 	  console.log('wew');
 	}
 	// ระบุว่า path นี้จะถูก handle ด้วย component ไหน
-
-
-	// โหลด component ต่างๆ
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
-	  { exact: true, component: _App2.default, onChange: handler },
+	  { exact: true, component: _App2.default },
 	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: function component(props) {
-	      return _react2.default.createElement(_Home2.default, props);
+	      return _react2.default.createElement(_Home2.default, _extends({}, props, { onChange: handler }));
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: function component(props) {
-	      return _react2.default.createElement(_Home2.default, props);
+	      return _react2.default.createElement(_Home2.default, _extends({}, props, { onChange: handler }));
 	    } }),
 	  _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: function component(props) {
-	      return _react2.default.createElement(_About2.default, props);
+	      return _react2.default.createElement(_About2.default, _extends({}, props, { onChange: handler }));
 	    } })
 	);
 
