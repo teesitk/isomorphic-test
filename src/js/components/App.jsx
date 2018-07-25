@@ -12,7 +12,7 @@ class App extends React.Component {
       this.state = {
         percent: 1
       };
-      this.unlisten = {};
+      this.progressDone = this.progressDone.bind(this)
     }
 
     // componentWillMount() {
@@ -24,18 +24,13 @@ class App extends React.Component {
         });
     }
     progressDone (e) {
+        e.preventDefault()
         this.setState({
             percent:100
         });
     }
     componentDidMount() {
       this.setPercent(100)
-    }
-    componentWillReceiveProps(nextProps) {
-      console.log('ok')
-      if (nextProps.location !== this.props.location) {
-        // navigated!
-      }
     }
 
     // ใส่ link ไปยังหน้า Home และ About

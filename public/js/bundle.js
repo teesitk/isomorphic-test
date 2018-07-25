@@ -24614,7 +24614,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24641,136 +24641,129 @@
 
 
 	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+	    _inherits(App, _React$Component);
 
-	  function App(props) {
-	    _classCallCheck(this, App);
+	    function App(props) {
+	        _classCallCheck(this, App);
 
-	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-	    _this.state = {
-	      percent: 1
-	    };
-	    _this.unlisten = {};
-	    return _this;
-	  }
-
-	  // componentWillMount() {
-	  //     this.setPercent(0)
-	  // }
-
-
-	  _createClass(App, [{
-	    key: 'setPercent',
-	    value: function setPercent(percent) {
-	      this.setState({
-	        percent: percent
-	      });
-	    }
-	  }, {
-	    key: 'progressDone',
-	    value: function progressDone(e) {
-	      this.setState({
-	        percent: 100
-	      });
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.setPercent(100);
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      console.log('ok');
-	      if (nextProps.location !== this.props.location) {
-	        // navigated!
-	      }
+	        _this.state = {
+	            percent: 1
+	        };
+	        _this.progressDone = _this.progressDone.bind(_this);
+	        return _this;
 	    }
 
-	    // ใส่ link ไปยังหน้า Home และ About
+	    // componentWillMount() {
+	    //     this.setPercent(0)
+	    // }
 
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
-	        _react2.default.createElement(
-	          'header',
-	          { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
-	          _react2.default.createElement(
-	            'nav',
-	            { className: 'container' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'd-flex justify-content-between hidden-lg-up' },
-	              _react2.default.createElement(
-	                'a',
-	                { className: 'navbar-brand', href: '/' },
-	                'Bootstrap'
-	              ),
-	              _react2.default.createElement(
-	                'button',
-	                { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#bd-main-nav', 'aria-controls': 'bd-main-nav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-	                _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'collapse navbar-collapse', id: 'bd-main-nav' },
-	              _react2.default.createElement(
-	                'ul',
-	                { className: 'nav navbar-nav' },
+
+	    _createClass(App, [{
+	        key: 'setPercent',
+	        value: function setPercent(percent) {
+	            this.setState({
+	                percent: percent
+	            });
+	        }
+	    }, {
+	        key: 'progressDone',
+	        value: function progressDone(e) {
+	            e.preventDefault();
+	            this.setState({
+	                percent: 100
+	            });
+	        }
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            this.setPercent(100);
+	        }
+
+	        // ใส่ link ไปยังหน้า Home และ About
+
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: 'nav-item' },
-	                  _react2.default.createElement(
-	                    _reactRouterDom.Link,
-	                    { to: '/', className: 'nav-item nav-link ' },
-	                    _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
-	                    'Home'
-	                  )
+	                    'header',
+	                    { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
+	                    _react2.default.createElement(
+	                        'nav',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'd-flex justify-content-between hidden-lg-up' },
+	                            _react2.default.createElement(
+	                                'a',
+	                                { className: 'navbar-brand', href: '/' },
+	                                'Bootstrap'
+	                            ),
+	                            _react2.default.createElement(
+	                                'button',
+	                                { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#bd-main-nav', 'aria-controls': 'bd-main-nav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+	                                _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'collapse navbar-collapse', id: 'bd-main-nav' },
+	                            _react2.default.createElement(
+	                                'ul',
+	                                { className: 'nav navbar-nav' },
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    { className: 'nav-item' },
+	                                    _react2.default.createElement(
+	                                        _reactRouterDom.Link,
+	                                        { to: '/', className: 'nav-item nav-link ' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
+	                                        'Home'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    { className: 'nav-item' },
+	                                    _react2.default.createElement(
+	                                        _reactRouterDom.Link,
+	                                        { to: '/about', className: 'nav-item nav-link ' },
+	                                        'About'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
 	                ),
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: 'nav-item' },
-	                  _react2.default.createElement(
-	                    _reactRouterDom.Link,
-	                    { to: '/about', className: 'nav-item nav-link ' },
-	                    'About'
-	                  )
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'card' },
+	                        _react2.default.createElement('img', { className: 'card-img-top', src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22769%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20769%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ab65a6332%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A38pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ab65a6332%22%3E%3Crect%20width%3D%22769%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22266.21875%22%20y%3D%22106.80000000000001%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E', alt: 'Card image cap' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'card-block' },
+	                            _react2.default.createElement(
+	                                'p',
+	                                { className: 'card-text' },
+	                                'sample content.'
+	                            ),
+	                            _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
+	                        )
+	                    ),
+	                    this.props.children
 	                )
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'card' },
-	            _react2.default.createElement('img', { className: 'card-img-top', src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22769%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20769%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ab65a6332%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A38pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ab65a6332%22%3E%3Crect%20width%3D%22769%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22266.21875%22%20y%3D%22106.80000000000001%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E', alt: 'Card image cap' }),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'card-block' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'card-text' },
-	                'sample content.'
-	              ),
-	              _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
-	            )
-	          ),
-	          this.props.children
-	        )
-	      );
-	    }
-	  }]);
+	            );
+	        }
+	    }]);
 
-	  return App;
+	    return App;
 	}(_react2.default.Component);
 
 	exports.default = App;
@@ -24970,7 +24963,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24992,52 +24985,45 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Home = function (_React$Component) {
-	  _inherits(Home, _React$Component);
+		_inherits(Home, _React$Component);
 
-	  function Home(props) {
-	    _classCallCheck(this, Home);
+		function Home() {
+			_classCallCheck(this, Home);
 
-	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+		}
 
-	    _this.state = {
-	      percent: 1
-	    };
-	    return _this;
-	  }
+		_createClass(Home, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var elem = _reactDom2.default.findDOMNode(this);
+				elem.style.opacity = 0;
+				window.requestAnimationFrame(function () {
+					elem.style.transition = "opacity 500ms";
+					elem.style.opacity = 1;
+				});
+				console.log(this.props);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'card' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'card-block' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'card-text' },
+							'The term isomorphism literally means sameness (iso) of form (morphism). In Gestalt psychology, Isomorphism is the idea that perception and the underlying physiological representation are similar because of related Gestalt qualities. Isomorphism refers to a correspondence between a stimulus array and the brain state created by that stimulus, and is based on the idea that the objective brain processes underlying and correlated with particular phenomenological experiences functionally have the same form and structure as those subjective experiences'
+						)
+					)
+				);
+			}
+		}]);
 
-	  _createClass(Home, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var elem = _reactDom2.default.findDOMNode(this);
-	      elem.style.opacity = 0;
-	      window.requestAnimationFrame(function () {
-	        elem.style.transition = "opacity 500ms";
-	        elem.style.opacity = 1;
-	      });
-	      this.setState({
-	        percent: 100
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'card' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'card-block' },
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'card-text' },
-	            'The term isomorphism literally means sameness (iso) of form (morphism). In Gestalt psychology, Isomorphism is the idea that perception and the underlying physiological representation are similar because of related Gestalt qualities. Isomorphism refers to a correspondence between a stimulus array and the brain state created by that stimulus, and is based on the idea that the objective brain processes underlying and correlated with particular phenomenological experiences functionally have the same form and structure as those subjective experiences'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Home;
+		return Home;
 	}(_react2.default.Component);
 
 	exports.default = Home;
@@ -25049,7 +25035,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -25071,53 +25057,46 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var About = function (_React$Component) {
-	  _inherits(About, _React$Component);
+		_inherits(About, _React$Component);
 
-	  function About(props) {
-	    _classCallCheck(this, About);
+		function About() {
+			_classCallCheck(this, About);
 
-	    var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+			return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+		}
 
-	    _this.state = {
-	      percent: 1
-	    };
-	    return _this;
-	  }
+		_createClass(About, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var elem = _reactDom2.default.findDOMNode(this);
+				elem.style.opacity = 0;
+				window.requestAnimationFrame(function () {
+					elem.style.transition = "opacity 500ms";
+					elem.style.opacity = 1;
+				});
+				console.log(this.props);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'card' },
+					_react2.default.createElement('img', { className: 'card-img-top', src: 'http://seanamarasinghe.com/wp-content/uploads/2015/09/react-es61-1050x360.jpg', alt: 'Card image cap' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'card-block' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'card-text' },
+							' The term isomorphism literally means sameness (iso) of form (morphism). In Gestalt psychology, Isomorphism is the idea that perception and the underlying physiological representation are similar because of related Gestalt qualities. Isomorphism refers to a correspondence between a stimulus array and the brain state created by that stimulus, and is based on the idea that the objective brain processes underlying and correlated with particular phenomenological experiences functionally have the same form and structure as those subjective experiences'
+						)
+					)
+				);
+			}
+		}]);
 
-	  _createClass(About, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var elem = _reactDom2.default.findDOMNode(this);
-	      elem.style.opacity = 0;
-	      window.requestAnimationFrame(function () {
-	        elem.style.transition = "opacity 500ms";
-	        elem.style.opacity = 1;
-	      });
-	      this.setState({
-	        percent: 100
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'card' },
-	        _react2.default.createElement('img', { className: 'card-img-top', src: 'http://seanamarasinghe.com/wp-content/uploads/2015/09/react-es61-1050x360.jpg', alt: 'Card image cap' }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'card-block' },
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'card-text' },
-	            ' The term isomorphism literally means sameness (iso) of form (morphism). In Gestalt psychology, Isomorphism is the idea that perception and the underlying physiological representation are similar because of related Gestalt qualities. Isomorphism refers to a correspondence between a stimulus array and the brain state created by that stimulus, and is based on the idea that the objective brain processes underlying and correlated with particular phenomenological experiences functionally have the same form and structure as those subjective experiences'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return About;
+		return About;
 	}(_react2.default.Component);
 
 	exports.default = About;
