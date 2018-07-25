@@ -24679,14 +24679,6 @@
 	        value: function componentDidMount() {
 	            this.setPercent(100);
 	        }
-	    }, {
-	        key: 'componentWillReceiveProps',
-	        value: function componentWillReceiveProps(nextProps) {
-	            console.log(nextProps);
-	            if (nextProps.location !== this.props.location) {
-	                // navigated!
-	            }
-	        }
 
 	        // ใส่ link ไปยังหน้า Home และ About
 
@@ -24941,15 +24933,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// ระบุว่า path นี้จะถูก handle ด้วย component ไหน
-
-
 	// โหลดความสามารถของ react-router มาใช้งาน
 	//import { Route, Router, IndexRoute } from 'react-router';
 	//import createBrowserHistory from 'history/lib/createBrowserHistory';
+	function handler() {
+	  console.log('wew');
+	}
+	// ระบุว่า path นี้จะถูก handle ด้วย component ไหน
+
+
+	// โหลด component ต่างๆ
 	exports.default = _react2.default.createElement(
 	  _reactRouterDom.Route,
-	  { exact: true, component: _App2.default },
+	  { exact: true, component: _App2.default, onChange: undefined.handler },
 	  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: function component(props) {
 	      return _react2.default.createElement(_Home2.default, props);
 	    } }),
@@ -24960,8 +24956,6 @@
 	      return _react2.default.createElement(_About2.default, props);
 	    } })
 	);
-
-	// โหลด component ต่างๆ
 
 /***/ },
 /* 72 */
