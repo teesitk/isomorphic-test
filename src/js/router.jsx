@@ -14,7 +14,7 @@ export default function(req, res) {
 	    location={req.url}
 	    context={context}
 	  >
-	  	<App {...routes.props}/>
+	  	<App {...routes.props} ok='ok' />
 	  </StaticRouter>
 	)
 

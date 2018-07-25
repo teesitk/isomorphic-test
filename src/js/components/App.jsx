@@ -31,6 +31,11 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
+    componentWillReceiveProps(nextProps) {
+      console.log('rcp')
+      // will be true
+      const locationChanged = nextProps.location !== this.props.location
+    }
 
     // ใส่ link ไปยังหน้า Home และ About
     render() {
