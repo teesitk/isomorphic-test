@@ -30,6 +30,9 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
+    componentWillReceiveProps(nextProps) {
+      console.log('receiveprop')
+    }
 
     // ใส่ link ไปยังหน้า Home และ About
     render() {

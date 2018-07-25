@@ -24614,7 +24614,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24641,127 +24641,132 @@
 
 
 	var App = function (_React$Component) {
-	    _inherits(App, _React$Component);
+	  _inherits(App, _React$Component);
 
-	    function App(props) {
-	        _classCallCheck(this, App);
+	  function App(props) {
+	    _classCallCheck(this, App);
 
-	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-	        _this.state = {
-	            percent: 1
-	        };
-	        return _this;
+	    _this.state = {
+	      percent: 1
+	    };
+	    return _this;
+	  }
+
+	  // componentWillMount() {
+	  //     this.setPercent(0)
+	  // }
+
+
+	  _createClass(App, [{
+	    key: 'setPercent',
+	    value: function setPercent(percent) {
+	      this.setState({
+	        percent: percent
+	      });
+	    }
+	  }, {
+	    key: 'progressDone',
+	    value: function progressDone(e) {
+	      this.setState({
+	        percent: 100
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.setPercent(100);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      console.log('receiveprop');
 	    }
 
-	    // componentWillMount() {
-	    //     this.setPercent(0)
-	    // }
+	    // ใส่ link ไปยังหน้า Home และ About
 
-
-	    _createClass(App, [{
-	        key: 'setPercent',
-	        value: function setPercent(percent) {
-	            this.setState({
-	                percent: percent
-	            });
-	        }
-	    }, {
-	        key: 'progressDone',
-	        value: function progressDone(e) {
-	            this.setState({
-	                percent: 100
-	            });
-	        }
-	    }, {
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            this.setPercent(100);
-	        }
-
-	        // ใส่ link ไปยังหน้า Home และ About
-
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactProgress2.default, { percent: this.state.percent, color: 'red' }),
+	        _react2.default.createElement(
+	          'header',
+	          { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
+	          _react2.default.createElement(
+	            'nav',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'd-flex justify-content-between hidden-lg-up' },
+	              _react2.default.createElement(
+	                'a',
+	                { className: 'navbar-brand', href: '/' },
+	                'Bootstrap'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#bd-main-nav', 'aria-controls': 'bd-main-nav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+	                _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'collapse navbar-collapse', id: 'bd-main-nav' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'nav navbar-nav' },
 	                _react2.default.createElement(
-	                    'header',
-	                    { className: 'navbar navbar-light navbar-toggleable-md bd-navbar' },
-	                    _react2.default.createElement(
-	                        'nav',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'd-flex justify-content-between hidden-lg-up' },
-	                            _react2.default.createElement(
-	                                'a',
-	                                { className: 'navbar-brand', href: '/' },
-	                                'Bootstrap'
-	                            ),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#bd-main-nav', 'aria-controls': 'bd-main-nav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-	                                _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'collapse navbar-collapse', id: 'bd-main-nav' },
-	                            _react2.default.createElement(
-	                                'ul',
-	                                { className: 'nav navbar-nav' },
-	                                _react2.default.createElement(
-	                                    'li',
-	                                    { className: 'nav-item' },
-	                                    _react2.default.createElement(
-	                                        _reactRouterDom.Link,
-	                                        { to: '/', className: 'nav-item nav-link ' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
-	                                        'Home'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'li',
-	                                    { className: 'nav-item' },
-	                                    _react2.default.createElement(
-	                                        _reactRouterDom.Link,
-	                                        { to: '/about', className: 'nav-item nav-link ' },
-	                                        'About'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
+	                  'li',
+	                  { className: 'nav-item' },
+	                  _react2.default.createElement(
+	                    _reactRouterDom.Link,
+	                    { to: '/', className: 'nav-item nav-link ' },
+	                    _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' }),
+	                    'Home'
+	                  )
 	                ),
 	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'card' },
-	                        _react2.default.createElement('img', { className: 'card-img-top', src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22769%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20769%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ab65a6332%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A38pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ab65a6332%22%3E%3Crect%20width%3D%22769%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22266.21875%22%20y%3D%22106.80000000000001%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E', alt: 'Card image cap' }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'card-block' },
-	                            _react2.default.createElement(
-	                                'p',
-	                                { className: 'card-text' },
-	                                'sample content.'
-	                            ),
-	                            _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
-	                        )
-	                    ),
-	                    this.props.children
+	                  'li',
+	                  { className: 'nav-item' },
+	                  _react2.default.createElement(
+	                    _reactRouterDom.Link,
+	                    { to: '/about', className: 'nav-item nav-link ' },
+	                    'About'
+	                  )
 	                )
-	            );
-	        }
-	    }]);
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'card' },
+	            _react2.default.createElement('img', { className: 'card-img-top', src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22769%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20769%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ab65a6332%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A38pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ab65a6332%22%3E%3Crect%20width%3D%22769%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22266.21875%22%20y%3D%22106.80000000000001%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E', alt: 'Card image cap' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'card-block' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'card-text' },
+	                'sample content.'
+	              ),
+	              _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
+	            )
+	          ),
+	          this.props.children
+	        )
+	      );
+	    }
+	  }]);
 
-	    return App;
+	  return App;
 	}(_react2.default.Component);
 
 	exports.default = App;
