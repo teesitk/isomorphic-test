@@ -69,7 +69,7 @@ class App extends React.Component {
                         <p className="card-text">sample content.</p><i className="fa fa-drivers-license-o" aria-hidden="true"></i>
                       </div>
                     </div>
-                    {this.props.children}
+                    {childrenWithProps}
                 </div>
 
             </div>

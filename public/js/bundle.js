@@ -24763,7 +24763,7 @@
 	                            _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
 	                        )
 	                    ),
-	                    this.props.children
+	                    childrenWithProps
 	                )
 	            );
 	        }
