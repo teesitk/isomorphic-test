@@ -30,8 +30,13 @@ class App extends React.Component {
     componentDidMount() {
       this.setPercent(100)
     }
-    componentWillReceiveProps(nextProps) {
-      console.log('receiveprop')
+    componentWillMount() {
+      this.unlisten = this.props.history.listen((location, action) => {
+      console.log("on route change");
+    });
+    }
+    componentWillUnmount() {
+        this.unlisten();
     }
 
     // ใส่ link ไปยังหน้า Home และ About
