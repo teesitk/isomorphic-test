@@ -24651,6 +24651,7 @@
 	        _this.state = {
 	            percent: 1
 	        };
+	        _this.progressDone = _this.progressDone.bind(_this);
 	        return _this;
 	    }
 
@@ -24685,6 +24686,14 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
+	            var children = this.props.children;
+
+
+	            var childrenWithProps = _react2.default.Children.map(children, function (child) {
+	                return _react2.default.cloneElement(child, { progressDone: _this2.progressDone });
+	            });
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -24756,7 +24765,7 @@
 	                            _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
 	                        )
 	                    ),
-	                    this.props.children
+	                    childrenWithProps
 	                )
 	            );
 	        }
@@ -25001,7 +25010,7 @@
 					elem.style.transition = "opacity 500ms";
 					elem.style.opacity = 1;
 				});
-				console.log(this.state);
+				console.log(this.props.progressDone);
 			}
 		}, {
 			key: 'render',
