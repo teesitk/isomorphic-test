@@ -24766,7 +24766,7 @@
 	                            _react2.default.createElement('i', { className: 'fa fa-drivers-license-o', 'aria-hidden': 'true' })
 	                        )
 	                    ),
-	                    childrenWithProps
+	                    _react2.default.createElement('childrenWithProps', null)
 	                )
 	            );
 	        }
